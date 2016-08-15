@@ -37,9 +37,4 @@
         <!-- Add your extensions here -->
     </extensions>
 
-    <application-components>
-        <component>
-            <implementation-class>com.xiao.plug.reactnative.runner.MainComponent</implementation-class>
-        </component>
-    </application-components>
 </idea-plugin>

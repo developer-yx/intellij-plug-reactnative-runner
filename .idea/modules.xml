@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/intellij-plug-react-runner.iml" filepath="$PROJECT_DIR$/intellij-plug-react-runner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellij-plug-reactnative-runner.iml" filepath="$PROJECT_DIR$/intellij-plug-reactnative-runner.iml" />
     </modules>
   </component>
 </project>
