@@ -3,7 +3,8 @@
     <name>ReactNative Runner</name>
     <version>1.0</version>
     <vendor email="prometheus.xiao@gamil.com" url="https://github.com/prometheus-xiao/intellij-plug-reactnative-runner">
-        Prometheus.X</vendor>
+        Prometheus.X
+    </vendor>
 
     <description><![CDATA[
       ReactNative Runner<br>
@@ -29,7 +30,20 @@
 
     <application-components>
         <component>
-            <implementation-class>com.xiao.plug.reactnative.runner.MainComponent</implementation-class>
+            <implementation-class>com.xiao.plug.reactnative.runner.ReloadComponent</implementation-class>
+        </component>
+        <component>
+            <implementation-class>com.xiao.plug.reactnative.runner.RunComponent</implementation-class>
         </component>
     </application-components>
+    <actions>
+        <action id="RunAndroidAction" class="com.xiao.plug.reactnative.runner.RunAndroidAction" text="Run Android"
+                description="Run Android" icon="Icons.S_RUN_ANDROID">
+            <add-to-group group-id="ToolbarMakeGroup" anchor="first"/>
+        </action>
+        <action id="ReloadAction" class="com.xiao.plug.reactnative.runner.ReloadAction" text="Reload JS"
+                description="Reload JS" icon="Icons.S_RELOAD_JS">
+            <add-to-group group-id="ToolbarMakeGroup" relative-to-action="RunAndroidAction" anchor="after"/>
+        </action>
+    </actions>
 </idea-plugin>

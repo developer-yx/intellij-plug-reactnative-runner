@@ -1,22 +1,13 @@
 <idea-plugin version="2">
-    <id>com.xiao.plug.git.ignore</id>
-    <name>Git Ignore File Creator</name>
+    <id>com.xiao.plug.reactnative.runner</id>
+    <name>ReactNative Runner</name>
     <version>1.0</version>
-    <vendor email="prometheus.ck@gamil.com" url="https://github.com/prometheus-ck/intellij-plug-ignore-creator">
-        Prometheus.CK</vendor>
+    <vendor email="prometheus.xiao@gamil.com" url="https://github.com/prometheus-xiao/intellij-plug-reactnative-runner">
+        Prometheus.X
+    </vendor>
 
     <description><![CDATA[
-      This plugin is an ignore file creator for Android Stuio.<br>
-      it can add the item which should be ignore for automatically, now support the items below:<br>
-      .gradle/<br>
-      .idea/<br>
-      local.properties<br>
-      *.iml<br>
-      captures/<br>
-      build/<br>
-      module1/build/<br>
-      module2/build/<br>
-      ......<br>
+      ReactNative Runner<br>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -37,4 +28,22 @@
         <!-- Add your extensions here -->
     </extensions>
 
+    <application-components>
+        <component>
+            <implementation-class>com.xiao.plug.reactnative.runner.ReloadComponent</implementation-class>
+        </component>
+        <component>
+            <implementation-class>com.xiao.plug.reactnative.runner.RunComponent</implementation-class>
+        </component>
+    </application-components>
+    <actions>
+        <action id="RunAndroidAction" class="com.xiao.plug.reactnative.runner.RunAndroidAction" text="Run Android"
+                description="Run Android" icon="Icons.S_RUN_ANDROID">
+            <add-to-group group-id="ToolbarMakeGroup" anchor="first"/>
+        </action>
+        <action id="ReloadAction" class="com.xiao.plug.reactnative.runner.ReloadAction" text="Reload JS"
+                description="Reload JS" icon="Icons.S_RELOAD_JS">
+            <add-to-group group-id="ToolbarMakeGroup" relative-to-action="RunAndroidAction" anchor="after"/>
+        </action>
+    </actions>
 </idea-plugin>
